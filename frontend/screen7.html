@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Denim Jacket | ReWear</title>
+    <link rel="stylesheet" href="screen7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Product Gallery (Left Panel) -->
+    <section class="product-gallery">
+        <div class="main-image-container">
+            <img src="https://i.imgur.com/5R5YV9T.jpg" alt="Vintage Denim Jacket" class="main-image" id="zoomable-image">
+            <div class="zoom-controls">
+                <button id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                <button id="zoom-out"><i class="fas fa-search-minus"></i></button>
+            </div>
+        </div>
+        <div class="thumbnail-scroller">
+            <div class="thumbnail active" data-image="https://i.imgur.com/5R5YV9T.jpg">
+                <img src="https://i.imgur.com/5R5YV9T.jpg" alt="Front view">
+            </div>
+            <div class="thumbnail" data-image="https://i.imgur.com/8QZQ9Zr.jpg">
+                <img src="https://i.imgur.com/8QZQ9Zr.jpg" alt="Back view">
+            </div>
+            <div class="thumbnail" data-image="https://i.imgur.com/9QZQ9Zr.jpg">
+                <img src="https://i.imgur.com/9QZQ9Zr.jpg" alt="Detail view">
+            </div>
+            <div class="thumbnail" data-image="https://i.imgur.com/7R5YV9T.jpg">
+                <img src="https://i.imgur.com/7R5YV9T.jpg" alt="Tag view">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details (Right Panel) -->
+    <section class="product-details">
+        <div class="product-header">
+            <h1>Vintage Denim Jacket</h1>
+            <div class="price-options">
+                <div class="price-tag cash">
+                    <span class="price">$25.00</span>
+                    <span class="label">Cash Price</span>
+                </div>
+                <div class="price-tag points active">
+                    <span class="price">250</span>
+                    <span class="label">Reward Points</span>
+                </div>
+            </div>
+            <div class="product-meta">
+                <span><i class="fas fa-ruler"></i> Size: M</span>
+                <span><i class="fas fa-palette"></i> Color: Light Blue</span>
+                <span><i class="fas fa-medal"></i> Condition: Excellent</span>
+            </div>
+        </div>
+
+        <!-- Seller Card -->
+        <div class="seller-card">
+            <div class="seller-info">
+                <img src="https://i.imgur.com/JDY4zWr.png" alt="Seller" class="seller-avatar">
+                <div class="seller-details">
+                    <h3>EcoFashionista</h3>
+                    <div class="seller-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (128 swaps)</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-message">
+                <i class="fas fa-comment-dots"></i> Message
+            </button>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="details">Details</button>
+                <button class="tab-btn" data-tab="shipping">Shipping</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="tab-content active" id="details">
+                <p>Authentic 90s vintage denim jacket with slight distressing. Perfect for layering. Original Levi's tags still attached.</p>
+                <ul class="specs-list">
+                    <li><strong>Brand:</strong> Levi's</li>
+                    <li><strong>Material:</strong> 100% Cotton</li>
+                    <li><strong>Care:</strong> Machine wash cold</li>
+                    <li><strong>Location:</strong> Brooklyn, NY</li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="shipping">
+                <p><i class="fas fa-truck"></i> <strong>Shipping Options:</strong></p>
+                <ul class="shipping-options">
+                    <li>
+                        <input type="radio" name="shipping" id="standard" checked>
+                        <label for="standard">Standard (3-5 days) - $5.99</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="shipping" id="express">
+                        <label for="express">Express (2 days) - $12.99</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="shipping" id="local">
+                        <label for="local">Local Pickup - Free</label>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="reviews">
+                <div class="review">
+                    <div class="reviewer">
+                        <img src="https://i.imgur.com/8QZQ9Zr.jpg" alt="Reviewer">
+                        <div>
+                            <h4>SwapQueen</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Exactly as described! The jacket arrived quickly and in perfect condition. Would swap again!"</p>
+                    <span class="review-date">2 weeks ago</span>
+                </div>
+                <!-- More reviews would go here -->
+            </div>
+        </div>
+
+        <!-- Swap Options -->
+        <div class="swap-options">
+            <h3>Available Swap Options:</h3>
+            <div class="swap-cards">
+                <div class="swap-card">
+                    <div class="swap-item">
+                        <img src="https://i.imgur.com/8QZQ9Zr.jpg" alt="Floral Dress">
+                        <div class="swap-details">
+                            <h4>Floral Summer Dress</h4>
+                            <p>Size S | LA</p>
+                        </div>
+                    </div>
+                    <button class="btn-swap">Request This Swap</button>
+                </div>
+                <div class="swap-card">
+                    <div class="swap-item">
+                        <img src="https://i.imgur.com/9QZQ9Zr.jpg" alt="Leather Bag">
+                        <div class="swap-details">
+                            <h4>Genuine Leather Bag</h4>
+                            <p>One Size | Chicago</p>
+                        </div>
+                    </div>
+                    <button class="btn-swap">Request This Swap</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn-wishlist">
+                <i class="fas fa-heart"></i> Save
+            </button>
+            <button class="btn-primary">
+                <i class="fas fa-exchange-alt"></i> Proceed to Swap
+            </button>
+        </div>
+    </section>
+
+    <!-- Image Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal">
+        <span class="close-zoom">&times;</span>
+        <img class="zoom-modal-content" id="zoomedImage">
+    </div>
+
+    <script src="screen7.js"></script>
+</body>
+</html>

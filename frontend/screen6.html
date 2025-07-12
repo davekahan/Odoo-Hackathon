@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear | My Dashboard</title>
+    <link rel="stylesheet" href="screen6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-pattern"></div>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>ReWear</h1>
+                </div>
+                <div class="user-greeting">
+                    <h2>Hello, <span id="username">EcoWarrior</span> <span class="greeting-emoji">👋</span></h2>
+                    <p>Welcome back to your sustainable fashion hub</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-avatar">
+                    <img src="https://i.imgur.com/JDY4zWr.png" alt="User Avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card" data-stat="swaps">
+                <div class="stat-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Active Swaps</h3>
+                    <p class="stat-value">4</p>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+            <div class="stat-card" data-stat="points">
+                <div class="stat-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Reward Points</h3>
+                    <p class="stat-value">850</p>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+            <div class="stat-card" data-stat="impact">
+                <div class="stat-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>CO₂ Saved</h3>
+                    <p class="stat-value">12kg</p>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+        </div>
+
+        <!-- Dashboard Tabs -->
+        <div class="dashboard-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="listings">My Listings</button>
+                <button class="tab-btn" data-tab="purchases">My Purchases</button>
+            </div>
+            
+            <!-- Listings Tab -->
+            <div class="tab-content active" id="listings">
+                <div class="items-grid">
+                    <!-- Item 1 -->
+                    <div class="item-card" data-aos="fade-up">
+                        <div class="item-image">
+                            <img src="https://i.imgur.com/5R5YV9T.jpg" alt="Denim Jacket">
+                            <span class="item-status active">Active</span>
+                        </div>
+                        <div class="item-details">
+                            <h3>Vintage Denim Jacket</h3>
+                            <p class="item-price">$25 or 250 pts</p>
+                            <div class="item-actions">
+                                <button class="btn-edit"><i class="fas fa-pencil-alt"></i> Edit</button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="item-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-image">
+                            <img src="https://i.imgur.com/8QZQ9Zr.jpg" alt="Summer Dress">
+                            <span class="item-status pending">Pending</span>
+                        </div>
+                        <div class="item-details">
+                            <h3>Floral Summer Dress</h3>
+                            <p class="item-price">$18 or 180 pts</p>
+                            <div class="item-actions">
+                                <button class="btn-edit"><i class="fas fa-pencil-alt"></i> Edit</button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more items -->
+                </div>
+            </div>
+            
+            <!-- Purchases Tab -->
+            <div class="tab-content" id="purchases">
+                <div class="empty-state">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>No purchases yet</h3>
+                    <p>Start swapping to see your purchases here</p>
+                    <button class="btn-primary">Browse Items</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>Browse</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Swaps</span>
+        </a>
+    </nav>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="screen6.js"></script>
+    <script>
+        AOS.init({ duration: 800 });
+    </script>
+</body>
+</html>

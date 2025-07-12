@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="screen8.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Manage Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Manage Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-list"></i>
+                            <span>Manage Listings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Admin Avatar">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Manage Users</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search users...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="add-user-btn">
+                        <i class="fas fa-plus"></i> Add User
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <!-- Users Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>User List</h3>
+                        <div class="table-actions">
+                            <button class="filter-btn">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <button class="export-btn">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/40" alt="User Avatar">
+                                            <span>John Doe</span>
+                                        </div>
+                                    </td>
+                                    <td>john.doe@example.com</td>
+                                    <td>Admin</td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="edit-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="delete-btn" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                            <button class="more-btn" title="More">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/40" alt="User Avatar">
+                                            <span>Jane Smith</span>
+                                        </div>
+                                    </td>
+                                    <td>jane.smith@example.com</td>
+                                    <td>Editor</td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="edit-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="delete-btn" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                            <button class="more-btn" title="More">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/40" alt="User Avatar">
+                                            <span>Robert Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>robert.j@example.com</td>
+                                    <td>Viewer</td>
+                                    <td><span class="status-badge inactive">Inactive</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="edit-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="delete-btn" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                            <button class="more-btn" title="More">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/40" alt="User Avatar">
+                                            <span>Sarah Williams</span>
+                                        </div>
+                                    </td>
+                                    <td>sarah.w@example.com</td>
+                                    <td>Editor</td>
+                                    <td><span class="status-badge suspended">Suspended</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="edit-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="delete-btn" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                            <button class="more-btn" title="More">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <div class="pagination-info">
+                            Showing 1 to 4 of 24 entries
+                        </div>
+                        <div class="pagination-controls">
+                            <button class="pagination-btn" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add User Modal (Hidden by default) -->
+    <div class="modal-overlay" id="addUserModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add New User</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addUserForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role">
+                            <option value="">Select role</option>
+                            <option value="admin">Admin</option>
+                            <option value="editor">Editor</option>
+                            <option value="viewer">Viewer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="suspended">Suspended</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancel</button>
+                <button class="save-btn">Save User</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="screen8.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear | Browse Items</title>
+    <link rel="stylesheet" href="screen5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-recycle"></i>
+            <h1>ReWear</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search items...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-links">
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-exchange-alt"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </nav>
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="listing-container">
+        <!-- Filters Section -->
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" checked> Tops</label>
+                <label><input type="checkbox"> Bottoms</label>
+                <label><input type="checkbox"> Shoes</label>
+                <label><input type="checkbox"> Accessories</label>
+            </div>
+            <div class="filter-group">
+                <h4>Size</h4>
+                <div class="size-options">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button class="active">M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <input type="range" min="0" max="100" value="50">
+            </div>
+            <button class="btn-apply">Apply Filters</button>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-grid">
+            <div class="sort-options">
+                <span>24 items found</span>
+                <select>
+                    <option>Sort by: Newest</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+
+            <div class="grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://i.imgur.com/5R5YV9T.jpg" alt="Denim Jacket">
+                        <button class="quick-view">Quick View</button>
+                    </div>
+                    <div class="product-details">
+                        <h4>Vintage Denim Jacket</h4>
+                        <p class="price">$25 <span>or 250 pts</span></p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-ruler"></i> Size M</span>
+                            <span><i class="fas fa-map-marker-alt"></i> NYC</span>
+                        </div>
+                        <button class="btn-swap">Request Swap</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.imgur.com/8QZQ9Zr.jpg" alt="Summer Dress">
+                        <button class="quick-view">Quick View</button>
+                    </div>
+                    <div class="product-details">
+                        <h4>Floral Summer Dress</h4>
+                        <p class="price">$18 <span>or 180 pts</span></p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-ruler"></i> Size S</span>
+                            <span><i class="fas fa-map-marker-alt"></i> LA</span>
+                        </div>
+                        <button class="btn-swap">Request Swap</button>
+                    </div>
+                </div>
+
+                <!-- Product 3-6 (Repeat structure) -->
+                <!-- ... -->
+            </div>
+
+            <div class="pagination">
+                <button disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quick View Modal (Hidden by default) -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <!-- Content loaded via JS -->
+        </div>
+    </div>
+
+    <script src="screen5.js"></script>
+</body>
+</html>

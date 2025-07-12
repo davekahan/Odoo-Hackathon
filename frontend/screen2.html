@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear | Register</title>
+    <link rel="stylesheet" href="screen2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="registration-container">
+        <!-- Left Panel (Branding) -->
+        <div class="left-panel">
+            <div class="brand-logo">
+                <i class="fas fa-recycle"></i>
+                <h1>ReWear</h1>
+            </div>
+            <p class="tagline">Swap clothes. Save the planet. Look fabulous.</p>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Basic Info</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Preferences</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Complete</div>
+                </div>
+            </div>
+            <div class="illustration">
+                <img src="https://i.imgur.com/JDY4zWr.png" alt="Clothing Swap Illustration">
+            </div>
+        </div>
+
+        <!-- Right Panel (Form) -->
+        <div class="right-panel">
+            <!-- Step 1: Basic Info -->
+            <form id="regForm" class="form-step active" data-step="1">
+                <h2>Create Your Account</h2>
+                <p class="form-subtitle">Join the sustainable fashion movement</p>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                        <i class="fas fa-eye password-toggle"></i>
+                    </div>
+                    <div class="password-strength">
+                        <span class="strength-bar weak"></span>
+                        <span class="strength-bar medium"></span>
+                        <span class="strength-bar strong"></span>
+                        <span class="strength-text">Password strength</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-next" onclick="nextStep(1, 2)">Continue <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+            </form>
+
+            <!-- Step 2: Preferences -->
+            <form id="prefForm" class="form-step" data-step="2">
+                <h2>Your Preferences</h2>
+                <p class="form-subtitle">Help us personalize your experience</p>
+
+                <div class="form-group">
+                    <label>Clothing Sizes (Select all that apply)</label>
+                    <div class="size-options">
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="XS">
+                            <span>XS</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="S">
+                            <span>S</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="M">
+                            <span>M</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="L">
+                            <span>L</span>
+                        </label>
+                        <label class="size-checkbox">
+                            <input type="checkbox" name="size" value="XL">
+                            <span>XL</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Clothing Styles</label>
+                    <div class="style-tags">
+                        <button type="button" class="style-tag">Casual</button>
+                        <button type="button" class="style-tag">Formal</button>
+                        <button type="button" class="style-tag">Vintage</button>
+                        <button type="button" class="style-tag">Sportswear</button>
+                        <button type="button" class="style-tag">Bohemian</button>
+                        <button type="button" class="style-tag active">Streetwear</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location (Optional)</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="location" name="location" placeholder="City, Country">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-prev" onclick="prevStep(2, 1)"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button type="button" class="btn-next" onclick="nextStep(2, 3)">Continue <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+
+            <!-- Step 3: Completion -->
+            <div id="completeStep" class="form-step completion-step" data-step="3">
+                <div class="success-animation">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+                <h2>Registration Complete!</h2>
+                <p class="completion-text">Welcome to ReWear! Your sustainable fashion journey begins now.</p>
+                
+                <div class="completion-actions">
+                    <button class="btn-explore" onclick="window.location.href='dashboard.html'">
+                        Explore the App <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-profile" onclick="window.location.href='profile.html'">
+                        <i class="fas fa-user-edit"></i> Complete Your Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="screen2.js"></script>
+</body>
+</html>
